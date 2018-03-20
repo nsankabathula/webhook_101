@@ -1,0 +1,16 @@
+gcloud projects add-iam-policy-binding weather-agent-dialogflow --member "serviceAccount:gcp-sa-naveen-01@weather-agent-dialogflow.iam.gserviceaccount.com" --role "roles/owner"
+gcloud iam service-accounts keys create service-account.json --iam-account gcp-sa-naveen-01@weather-agent-dialogflow.iam.gserviceaccount.com
+
+set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\nsankabathula\dev\jscript\webhook_101\account\service-account.json
+
+set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\nsankabathula\dev\jscript\webhook_101\account\imdb-movie-agent.json
+
+staging.weather-agent-dialogflow.appspot.com
+
+gcloud beta functions deploy helloHttp --stage-bucket staging.weather-agent-dialogflow.appspot.com --trigger-http
+gcloud beta functions deploy helloGET --trigger-http
+
+https://us-central1-weather-agent-dialogflow.cloudfunctions.net/helloHttp
+
+
+gcloud beta functions deploy helloHttp --stage-bucket staging.imdb-movie-agent.appspot.com --trigger-http

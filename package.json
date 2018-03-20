@@ -1,0 +1,20 @@
+{
+  "name": "gcp_webhook_101",
+  "version": "1.0.7",
+  "description": "Google cloud platform webhook project 101",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/auth_test.js",
+    "start": "node ./server.js"
+  },
+  "author": "Naveen Sankabathula",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^1.6.0",
+    "body-parser": "^1.18.2",
+    "circular-json": "^0.5.1",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "request": "^2.85.0"
+  }
+}
